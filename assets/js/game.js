@@ -11,7 +11,7 @@ var playerAttack = 10;
 var playerMoney = 10;
 
 // You can also log multiple values at once like this
-console.log(playerName, playerAttack, playerHealth, playerMoney);
+// console.log(playerName, playerAttack, playerHealth, playerMoney);
 
 // Set stats for enemy
 var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
@@ -19,18 +19,21 @@ var enemyHealth = 50;
 var enemyAttack = 12;
 
 // Display the preceding array of names
-console.log(enemyNames);
-console.log(enemyNames[0]);
-console.log(enemyNames[1]);
-console.log(enemyNames[2]);
-console.log(enemyNames.length);
-for(var i = 0; i < enemyNames.length; i++) {
-    console.log(enemyNames[i]);
-    console.log(i);
-    console.log(enemyNames[i] + " is at " + i + " index");
-}
+// console.log(enemyNames);
+// console.log(enemyNames[0]);
+// console.log(enemyNames[1]);
+// console.log(enemyNames[2]);
+// console.log(enemyNames.length);
 
-var fight = function() {
+// Set up loop for array of names
+// for(var i = 0; i < enemyNames.length; i++) {
+//     fight(enemyNames[i]);
+    // console.log(enemyNames[i]);
+    // console.log(i);
+    // console.log(enemyNames[i] + " is at " + i + " index");
+// }
+
+var fight = function(enemyName) {
     // Alert players that they are starting the round
     window.alert("Welcome to Robot Gladiators!");
 
@@ -38,7 +41,7 @@ var fight = function() {
     var promptFight = window.prompt("Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose.");
 
     // If player choses to fight, then fight
-    if (promptFight === "fight" || promptFight === "FIGHT") {
+    if (promptFight === "fight" || promptFight === "FIGHT") {   
     // Subtract the value of 'playerAttack' from the value of 'enemyHealth' and use that result to update the value in the 'enemyHealth' variable
     enemyHealth = enemyHealth - playerAttack;
     
@@ -99,3 +102,8 @@ var fight = function() {
 };
 
 // fight();
+
+// Loop for multiple fights
+for(var i = 0; i < enemyNames.length; i++) {
+    fight(enemyNames[i]);
+}
