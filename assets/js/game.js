@@ -1,17 +1,10 @@
-// var playerName = window.prompt("What is your robot's name?");
-// // window.alert(playerName);
-// console.log(playerName);
+// Game States
+// "WIN" - Player robot has defeated all enemy-robots
+//  * Fight all enemy-robots
+//  * Defeat each enemy-robot
+// "LOSE" - Player robot's health is zero or less
 
-// console.log("This logs a string, good for leaving yourself a message");
-// console.log(10+10);
-// console.log("Our robot's name is " + playerName);
-
-// function fight () {
-//     window.alert("The fight has begun!");
-// }
-
-// // fight();
-
+// Set stats for player
 var playerName = window.prompt("What is your robot's name?");
 var playerHealth = 100;
 var playerAttack = 10;
@@ -20,9 +13,22 @@ var playerMoney = 10;
 // You can also log multiple values at once like this
 console.log(playerName, playerAttack, playerHealth, playerMoney);
 
-var enemyName = "Roborto";
+// Set stats for enemy
+var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
 var enemyHealth = 50;
 var enemyAttack = 12;
+
+// Display the preceding array of names
+console.log(enemyNames);
+console.log(enemyNames[0]);
+console.log(enemyNames[1]);
+console.log(enemyNames[2]);
+console.log(enemyNames.length);
+for(var i = 0; i < enemyNames.length; i++) {
+    console.log(enemyNames[i]);
+    console.log(i);
+    console.log(enemyNames[i] + " is at " + i + " index");
+}
 
 var fight = function() {
     // Alert players that they are starting the round
@@ -92,4 +98,4 @@ var fight = function() {
 
 };
 
-fight();
+// fight();
