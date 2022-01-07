@@ -115,7 +115,7 @@ var startGame = function() {
     }
 
     // Play again
-    startGame();
+    endGame();
 };
 
 // Function to end the entire game
@@ -141,4 +141,4 @@ var endGame = function(){
 };
 
 // Start game when page loads
-endGame();
+startGame();
